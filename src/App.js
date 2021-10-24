@@ -1,24 +1,46 @@
-import logo from './logo.svg';
+// import { useEffect, useState } from 'react';
+import { Button, Container, Divider, Grid, Header, Input } from 'semantic-ui-react'
+
 import './App.css';
+import 'semantic-ui-css/semantic.min.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+
+      <Container>
+        <Divider hidden />
+
+        <Header as='h3'>Responsive Width Adjustments</Header>
+        <p>You can specify columns to appear at different widths on different screens.</p>
+
+        <Grid columns={3} doubling stackable>
+          <Grid.Column>
+            <Input label="City 1" focus placeholder='City Name...' />
+            <br />
+            results
+          </Grid.Column>
+          <Grid.Column>
+            <Input label="City 2" focus placeholder='City Name...' />
+            <br />
+            results
+          </Grid.Column>
+          <Grid.Column>
+            <Button primary>Submit</Button>
+          </Grid.Column>
+          <Grid.Column>
+          </Grid.Column>
+          <Grid.Column>
+          </Grid.Column>
+          <Grid.Column>
+          </Grid.Column>
+        </Grid>
+
+
+
+      </Container>
+    </div >
+
   );
 }
 
